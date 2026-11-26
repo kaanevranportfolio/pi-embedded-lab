@@ -21,7 +21,10 @@
 !/piproj/CMakeLists.txt
 !/piproj/cmake/
 !/piproj/src/
+!/piproj/tools/
+/piproj/tools/pimon-out/
 
 *.log
 *.bak*
 __pycache__/
+/piproj/tools/rec-out/

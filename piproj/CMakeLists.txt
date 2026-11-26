@@ -8,6 +8,7 @@ add_compile_options(-Wall -Wextra)
 add_executable(hello   src/hello.c)
 add_executable(gpioinfo_mini src/gpioinfo_mini.c)
 add_executable(spi_loopback  src/spi_loopback.c)
+add_executable(belt_counter  src/belt_counter.c)
 
 # Deploy: cmake --build build --target deploy  (uses an SSH host alias, default "testbed")
 set(PI_HOST testbed CACHE STRING "SSH host alias of the target")
