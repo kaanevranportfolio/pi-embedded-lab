@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="DejaVu Sans, Verdana, Arial, Helvetica, sans-serif">
+<title>Lab setup: PC and Raspberry Pi 3 on wired Ethernet, USB webcam on the Pi</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0969da"/></marker><marker id="arrow-rev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#1a7f37"/></marker></defs>
+<rect x="1" y="1" width="998" height="558" rx="14" fill="#ffffff" stroke="#d0d7de"/>
+<text x="500.0" y="34" font-size="19" font-weight="bold" text-anchor="middle" fill="#1f2328" >Lab setup: PC, Raspberry Pi 3 and USB webcam</text>
+<rect x="30" y="60" width="300" height="250" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+<text x="44" y="86" font-size="16" font-weight="bold" text-anchor="start" fill="#1f2328" >PC (Ubuntu, x86-64)</text>
+<text x="44" y="112" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• CMake + aarch64 cross toolchain</text>
+<text x="44" y="134" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• writes the microSD image (dd + cmp)</text>
+<text x="44" y="156" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• belt_ui.py: Python web server</text>
+<text x="44" y="178" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• browser: http://localhost:8080</text>
+<text x="44" y="200" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• SSH client (key login)</text>
+<rect x="670" y="60" width="300" height="250" rx="10" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+<text x="684" y="86" font-size="16" font-weight="bold" text-anchor="start" fill="#1f2328" >Raspberry Pi 3 Model B</text>
+<text x="684" y="112" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• Yocto image (systemd), on microSD</text>
+<text x="684" y="134" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• Dropbear SSH server</text>
+<text x="684" y="156" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• belt_counter (C, V4L2)</text>
+<text x="684" y="178" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• reads /dev/video0 (uvcvideo)</text>
+<text x="684" y="200" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• gets its IP address by DHCP</text>
+<text x="684" y="222" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >• undervolt-watch service</text>
+<rect x="420" y="82" width="160" height="64" rx="10" fill="#f6f8fa" stroke="#6e7781" stroke-width="2"/>
+<text x="500.0" y="109" font-size="15" font-weight="bold" text-anchor="middle" fill="#1f2328" >Router / switch</text>
+<text x="500.0" y="130" font-size="13" font-weight="normal" text-anchor="middle" fill="#57606a" >DHCP server</text>
+<polyline points="330,114.0 420,114.0" fill="none" stroke="#6e7781" stroke-width="5"/>
+<polyline points="580,114.0 670,114.0" fill="none" stroke="#6e7781" stroke-width="5"/>
+<text x="375.0" y="104.0" font-size="13" font-weight="normal" text-anchor="middle" fill="#57606a" >Ethernet</text>
+<text x="625.0" y="104.0" font-size="13" font-weight="normal" text-anchor="middle" fill="#57606a" >Ethernet</text>
+<text x="625.0" y="134.0" font-size="12" font-weight="normal" text-anchor="middle" fill="#57606a" >100 Mbit/s</text>
+<polyline points="330,210 670,210" fill="none" stroke="#0969da" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="500.0" y="184" font-size="13" font-weight="normal" text-anchor="middle" fill="#0969da" >over SSH: copy the program,</text>
+<text x="500.0" y="201" font-size="13" font-weight="normal" text-anchor="middle" fill="#0969da" >start it, send commands</text>
+<polyline points="330,270 670,270" fill="none" stroke="#1a7f37" stroke-width="2.5" marker-start="url(#arrow-rev)"/>
+<text x="500.0" y="244" font-size="13" font-weight="normal" text-anchor="middle" fill="#1a7f37" >over SSH: object list for every frame</text>
+<text x="500.0" y="261" font-size="13" font-weight="normal" text-anchor="middle" fill="#1a7f37" >+ video frames for the browser</text>
+<rect x="670" y="380" width="130" height="104" rx="10" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+<text x="684" y="406" font-size="14" font-weight="bold" text-anchor="start" fill="#1f2328" >Power supply</text>
+<text x="684" y="432" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >5 V, 2 A (rated)</text>
+<text x="684" y="454" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >micro-USB</text>
+<rect x="815" y="380" width="155" height="104" rx="10" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+<text x="829" y="406" font-size="14" font-weight="bold" text-anchor="start" fill="#1f2328" >USB webcam</text>
+<text x="829" y="432" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >UVC class</text>
+<text x="829" y="454" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >YUYV 320×240</text>
+<text x="829" y="476" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >30 frames/s</text>
+<polyline points="735.0,310 735.0,380" fill="none" stroke="#1f2328" stroke-width="2.5"/>
+<polyline points="892.5,310 892.5,380" fill="none" stroke="#1f2328" stroke-width="2.5"/>
+<text x="743.0" y="350" font-size="12" font-weight="normal" text-anchor="start" fill="#57606a" >power</text>
+<text x="900.5" y="350" font-size="12" font-weight="normal" text-anchor="start" fill="#57606a" >USB</text>
+<rect x="330" y="380" width="250" height="82" rx="10" fill="#ffffff" stroke="#8250df" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="344" y="406" font-size="14" font-weight="bold" text-anchor="start" fill="#1f2328" >USB-serial adapter, 3.3 V</text>
+<text x="344" y="432" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >optional: boot console</text>
+<text x="344" y="454" font-size="13.5" font-weight="normal" text-anchor="start" fill="#1f2328" >to Pi pins 6 GND, 8 TXD, 10 RXD</text>
+<polyline points="180,310 180,421.0 330,421.0" fill="none" stroke="#8250df" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="188" y="350" font-size="12" font-weight="normal" text-anchor="start" fill="#57606a" >USB</text>
+<polyline points="580,421.0 640,421.0 640,290 670,290" fill="none" stroke="#8250df" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="632" y="312" font-size="12" font-weight="normal" text-anchor="end" fill="#57606a" >GPIO header</text>
+<polyline points="40,505 80,505" fill="none" stroke="#6e7781" stroke-width="5"/>
+<text x="88" y="510" font-size="12.5" font-weight="normal" text-anchor="start" fill="#57606a" >cable</text>
+<polyline points="150,505 190,505" fill="none" stroke="#0969da" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="198" y="510" font-size="12.5" font-weight="normal" text-anchor="start" fill="#57606a" >data flow (inside the Ethernet link)</text>
+<polyline points="450,505 490,505" fill="none" stroke="#8250df" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="498" y="510" font-size="12.5" font-weight="normal" text-anchor="start" fill="#57606a" >optional, not needed for the demo</text>
+<text x="40" y="537" font-size="12" font-weight="normal" text-anchor="start" fill="#57606a" >No monitor or keyboard on the Pi: everything goes over SSH. Source: docs/make_setup_diagram.py</text>
+</svg>
