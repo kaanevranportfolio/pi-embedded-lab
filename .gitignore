@@ -1,0 +1,27 @@
+# Allow-list: everything is ignored unless listed below.
+/*
+!/.gitignore
+!/README.md
+!/docs/
+
+!/yocto-lab/
+/yocto-lab/*
+!/yocto-lab/meta-lab/
+!/yocto-lab/local.conf.sample
+
+!/buildroot-lab/
+/buildroot-lab/*
+!/buildroot-lab/lab.fragment.in
+!/buildroot-lab/board/
+!/buildroot-lab/overlay/
+/buildroot-lab/overlay/root/.ssh/authorized_keys
+
+!/piproj/
+/piproj/*
+!/piproj/CMakeLists.txt
+!/piproj/cmake/
+!/piproj/src/
+
+*.log
+*.bak*
+__pycache__/

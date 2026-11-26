@@ -1,0 +1,13 @@
+[Unit]
+Description=Raspberry Pi under-voltage watcher
+After=systemd-modules-load.service
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/undervolt-watch
+ExecStart=/usr/libexec/undervolt-watch
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

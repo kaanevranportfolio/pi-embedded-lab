@@ -1,0 +1,20 @@
+# Lines this lab adds to build/conf/local.conf (core-image-minimal, Raspberry Pi 3, scarthgap)
+MACHINE = "raspberrypi3-64"
+ENABLE_UART = "1"
+ENABLE_I2C = "1"
+ENABLE_SPI_BUS = "1"
+KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev spi-bcm2835 spidev raspberrypi-hwmon uvcvideo"
+
+# systemd instead of SysVinit
+INIT_MANAGER = "systemd"
+
+IMAGE_FEATURES += "ssh-server-dropbear"
+IMAGE_INSTALL:append = " i2c-tools libgpiod-tools kernel-module-spi-bcm2835 kernel-module-spidev kernel-module-raspberrypi-hwmon hello gpioinfo-mini undervolt-watch"
+# USB (UVC) camera, tested with a Logitech C270
+IMAGE_INSTALL:append = " v4l-utils kernel-module-uvcvideo kernel-module-videodev kernel-module-videobuf2-v4l2 kernel-module-videobuf2-common kernel-module-videobuf2-vmalloc kernel-module-videobuf2-memops"
+hostname:pn-base-files = "yoctotest"
+INHERIT += "rm_work"
+
+# Public SSH key for root, installed by classes/sshkey.bbclass (set your own, do not commit it)
+INHERIT += "sshkey"
+LAB_SSH_PUBKEY = "ssh-ed25519 AAAA...your-public-key... comment"

@@ -1,0 +1,4 @@
+# Settings for undervolt-watch.service
+INTERVAL=5
+# Poweroff after this many consecutive reads with the under-voltage flag set. 0 = only log.
+SHUTDOWN_AFTER=0
