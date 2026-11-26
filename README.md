@@ -84,4 +84,4 @@ The `deploy` target uses `scp`. The Yocto and Buildroot images here use Dropbear
 
 ## License
 
-No license has been chosen yet.
+MIT, see [LICENSE](LICENSE).
