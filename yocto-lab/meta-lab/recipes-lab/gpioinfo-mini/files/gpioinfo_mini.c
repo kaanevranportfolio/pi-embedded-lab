@@ -1,4 +1,4 @@
-/* Listet alle GPIO-Chips ueber die Character-Device-Schnittstelle (ioctl). */
+/* Lists all GPIO chips through the character-device interface (ioctl). */
 #include <fcntl.h>
 #include <linux/gpio.h>
 #include <stdio.h>
