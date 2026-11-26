@@ -1,0 +1,2 @@
+# Keep the figure generator out of the GitHub language stats (it is documentation tooling).
+docs/** linguist-documentation

@@ -15,7 +15,7 @@ Hands-on notes and code from building small Linux images for a Raspberry Pi 3 Mo
 
 Not included: poky, meta-openembedded, meta-raspberrypi (clone them, see below), build output, downloads and images.
 
-## Demo: counting objects on a "belt" with a USB camera
+## Demo: object counting on the Pi with a USB camera, live view in the browser over SSH
 
 ![Belt counter demo: three objects cross the green line and the counter goes from 0 to 3](docs/belt-counter-demo.gif)
 
