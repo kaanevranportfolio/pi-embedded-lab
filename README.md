@@ -17,9 +17,9 @@ Not included: poky, meta-openembedded, meta-raspberrypi (clone them, see below),
 
 ## Demo: counting objects on a "belt" with a USB camera
 
-[![Belt counter demo: three objects cross the green line and the counter goes from 0 to 3. Click to play.](docs/belt-counter-demo.jpg)](docs/belt-counter-demo.mp4)
+![Belt counter demo: three objects cross the green line and the counter goes from 0 to 3](docs/belt-counter-demo.gif)
 
-*7-second screen recording of the control page (click the picture to play the MP4).* A sheet of paper with three small objects is the "belt". The camera is moved to the right over the fixed sheet, so the objects travel to the left across the green line, and the counter goes from 0 to 3.
+*7-second screen recording of the control page (looping GIF; the full-quality [MP4](docs/belt-counter-demo.mp4) can be downloaded).* A sheet of paper with three small objects is the "belt". The camera is moved to the right over the fixed sheet, so the objects travel to the left across the green line, and the counter goes from 0 to 3.
 
 How it works: `belt_counter` runs on the Pi (C, V4L2, YUYV 320x240 at 30 fps). Each frame it estimates the brightness and colour of the sheet, finds objects that differ from it, tracks them and counts how many cross the line. The PC runs `belt_ui.py`, a small Python server that starts the program over SSH and shows the live image, the boxes and the counter in a browser, with Start, Stop and Reset buttons and sliders for the line position and the sensitivity.
 
